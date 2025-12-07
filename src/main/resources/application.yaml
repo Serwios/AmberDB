@@ -1,3 +1,12 @@
 spring:
+  main:
+    banner-mode: off
+    log-startup-info: false
   application:
     name: amberdb
+
+logging:
+  level:
+    root: ERROR
+    org.springframework: ERROR
+    org.springframework.boot: ERROR

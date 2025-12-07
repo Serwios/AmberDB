@@ -1,5 +1,6 @@
 package com.serwios.amberdb.shell;
 
+import lombok.RequiredArgsConstructor;
 import org.jline.reader.EndOfFileException;
 import org.jline.reader.LineReader;
 import org.jline.reader.LineReaderBuilder;
@@ -11,16 +12,10 @@ import org.jline.utils.AttributedStyle;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class AmberShell {
-
     private final BannerPrinter bannerPrinter;
     private final CommandHandler commandHandler;
-
-    public AmberShell(BannerPrinter bannerPrinter,
-                      CommandHandler commandHandler) {
-        this.bannerPrinter = bannerPrinter;
-        this.commandHandler = commandHandler;
-    }
 
     public void start() throws Exception {
         try (Terminal terminal = TerminalBuilder.builder()

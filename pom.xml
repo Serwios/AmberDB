@@ -24,11 +24,14 @@
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
+        <!-- Util -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+        <!-- REPL -->
         <dependency>
             <groupId>org.jline</groupId>
             <artifactId>jline</artifactId>
@@ -45,6 +48,8 @@
 	</dependencies>
 
 	<build>
+        <finalName>amberdb</finalName>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
